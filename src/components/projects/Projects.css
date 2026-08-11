@@ -1,0 +1,698 @@
+.projects-section {
+  padding: 100px 80px;
+  background: #050816;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================
+   Background Glow
+========================= */
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #2563eb;
+  filter: blur(180px);
+  opacity: 0.12;
+  top: -180px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.projects-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #7c3aed;
+  filter: blur(170px);
+  opacity: 0.12;
+  bottom: -150px;
+  left: -150px;
+  pointer-events: none;
+}
+
+/* =========================
+   Header
+========================= */
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-subtitle {
+  color: #38bdf8;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.projects-header h2 {
+  font-size: 54px;
+  margin: 12px 0 0;
+  background: linear-gradient(90deg, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   Projects Container
+========================= */
+
+.projects-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   Project Card
+========================= */
+
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+
+  margin-bottom: 130px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* =========================
+   Project Image
+========================= */
+
+.project-image {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Device Mockup */
+
+.device-frame {
+  width: 100%;
+  max-width: 620px;
+  margin: auto;
+
+  padding: 10px;
+
+  background: linear-gradient(
+    145deg,
+    #1e293b,
+    #0f172a
+  );
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(56, 189, 248, 0.08);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+/* MacBook Top Bar */
+
+.device-top {
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding-left: 8px;
+}
+
+/* Browser dots */
+
+.device-top span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+.device-top span:nth-child(1) {
+  background: #ff5f57;
+}
+
+.device-top span:nth-child(2) {
+  background: #febc2e;
+}
+
+.device-top span:nth-child(3) {
+  background: #28c840;
+}
+
+/* Screen */
+
+.device-screen {
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #020617;
+
+  aspect-ratio: 16 / 10;
+}
+
+.device-screen img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  border: none;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* Hover */
+
+.project-card:hover .device-frame {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(56, 189, 248, 0.12);
+}
+
+.project-card:hover .device-screen img {
+  transform: scale(1.035);
+}
+
+/* =========================
+   Project Content
+========================= */
+
+.project-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-number {
+  display: inline-block;
+
+  color: #38bdf8;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 12px;
+
+  opacity: 0.8;
+}
+
+.project-content h3 {
+  font-size: 42px;
+
+  margin: 0 0 25px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #cbd5e1
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-content p {
+  color: #94a3b8;
+
+  line-height: 1.9;
+
+  margin-bottom: 35px;
+
+  font-size: 17px;
+
+  max-width: 600px;
+}
+
+/* =========================
+   Technology Badges
+========================= */
+
+.project-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 35px;
+}
+
+.tech-badge {
+  padding: 9px 16px;
+
+  border-radius: 50px;
+
+  background: rgba(56, 189, 248, 0.07);
+
+  border: 1px solid rgba(56, 189, 248, 0.2);
+
+  color: #38bdf8;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: #38bdf8;
+
+  color: #020617;
+
+  border-color: #38bdf8;
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.project-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.project-buttons a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  padding: 13px 22px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  font-size: 14px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.live-btn {
+  background: #38bdf8;
+
+  color: #020617;
+}
+
+.github-btn {
+  background: transparent;
+
+  border: 1px solid rgba(56, 189, 248, 0.5);
+
+  color: #ffffff;
+}
+
+.live-btn:hover,
+.github-btn:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(56, 189, 248, 0.2);
+}
+
+.github-btn:hover {
+  background: rgba(56, 189, 248, 0.08);
+
+  border-color: #38bdf8;
+}
+
+/* =========================
+   Responsive - Tablet
+========================= */
+
+@media (max-width: 992px) {
+  .projects-section {
+    padding: 80px 30px;
+  }
+
+  .project-card,
+  .project-card.reverse {
+    flex-direction: column;
+
+    gap: 50px;
+
+    margin-bottom: 100px;
+  }
+
+  .project-image,
+  .project-content {
+    width: 100%;
+  }
+
+  .project-content {
+    text-align: center;
+  }
+
+  .project-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
+
+  .device-frame {
+    max-width: 700px;
+  }
+
+  .projects-header h2 {
+    font-size: 42px;
+  }
+
+  .project-content h3 {
+    font-size: 36px;
+  }
+}
+
+/* =========================
+   Responsive - Mobile
+========================= */
+
+@media (max-width: 576px) {
+  .projects-section {
+    padding: 70px 20px;
+  }
+
+  .projects-header {
+    margin-bottom: 60px;
+  }
+
+  .projects-subtitle {
+    font-size: 15px;
+  }
+
+  .projects-header h2 {
+    font-size: 34px;
+  }
+
+  .project-card,
+  .project-card.reverse {
+    gap: 35px;
+
+    margin-bottom: 80px;
+  }
+
+  .device-frame {
+    padding: 7px;
+
+    border-radius: 13px;
+  }
+
+  .device-top {
+    height: 22px;
+  }
+
+  .device-top span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .device-screen {
+    border-radius: 7px;
+  }
+
+  .project-number {
+    font-size: 13px;
+  }
+
+  .project-content h3 {
+    font-size: 29px;
+
+    margin-bottom: 18px;
+  }
+
+  .project-content p {
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    margin-bottom: 25px;
+  }
+
+  .project-tech {
+    gap: 8px;
+
+    margin-bottom: 28px;
+  }
+
+  .tech-badge {
+    padding: 8px 13px;
+
+    font-size: 12px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .project-buttons a {
+    width: 100%;
+  }
+}
+/* =================================
+   SAHAYYA - PHONE MOCKUP
+================================= */
+
+.device-frame.phone {
+  width: 280px;
+  height: 570px;
+
+  max-width: 280px;
+
+  padding: 12px;
+
+  margin: 0 auto;
+
+  border-radius: 42px;
+
+  background: linear-gradient(
+    145deg,
+    #1e293b,
+    #080d1c
+  );
+
+  border: 2px solid rgba(255, 255, 255, 0.14);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 0 45px rgba(56, 189, 248, 0.08);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+/* =========================
+   Speaker
+========================= */
+
+.device-frame.phone .phone-speaker {
+  width: 65px;
+  height: 6px;
+
+  background: #020617;
+
+  border-radius: 20px;
+
+  margin: 2px auto 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   Phone Screen
+========================= */
+
+.device-frame.phone .device-screen {
+  width: 100%;
+  height: 500px;
+
+  aspect-ratio: auto;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  background: #050816;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   SAHAYYA Square Image
+========================= */
+
+.device-frame.phone .device-screen img {
+  width: 88%;
+  height: 88%;
+
+  object-fit: contain;
+
+  display: block;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Image Hover */
+
+.project-card:hover
+.device-frame.phone
+.device-screen
+img {
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   Home Indicator
+========================= */
+
+.device-frame.phone .phone-home-bar {
+  width: 80px;
+  height: 5px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  border-radius: 20px;
+
+  margin: 10px auto 0;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   Phone Hover
+========================= */
+
+.project-card:hover .device-frame.phone {
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.6),
+    0 0 55px rgba(56, 189, 248, 0.15);
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 576px) {
+
+  .device-frame.phone {
+    width: 235px;
+    height: 480px;
+
+    max-width: 235px;
+
+    border-radius: 34px;
+
+    padding: 9px;
+  }
+
+  .device-frame.phone .phone-speaker {
+    width: 55px;
+    height: 5px;
+
+    margin-bottom: 9px;
+  }
+
+  .device-frame.phone .device-screen {
+    height: 420px;
+
+    border-radius: 24px;
+  }
+
+  .device-frame.phone .device-screen img {
+    width: 88%;
+    height: 88%;
+
+    border-radius: 11px;
+  }
+
+  .device-frame.phone .phone-home-bar {
+    width: 65px;
+    height: 4px;
+
+    margin-top: 8px;
+  }
+}

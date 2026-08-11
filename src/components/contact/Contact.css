@@ -1,0 +1,284 @@
+.contact-section {
+  position: relative;
+  padding: 110px 80px;
+  background: #050816;
+  color: white;
+  overflow: hidden;
+}
+
+/* =========================
+   Background Glow
+========================= */
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: #2563eb;
+  filter: blur(180px);
+  opacity: 0.15;
+  top: 50px;
+  left: -180px;
+  pointer-events: none;
+}
+
+.contact-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #7c3aed;
+  filter: blur(170px);
+  opacity: 0.12;
+  bottom: -150px;
+  right: -120px;
+  pointer-events: none;
+}
+
+/* =========================
+   Header
+========================= */
+
+.contact-header {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  max-width: 700px;
+  margin: 0 auto 65px;
+}
+
+.contact-subtitle {
+  color: #38bdf8;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.contact-header h2 {
+  font-size: 54px;
+  margin: 0 0 18px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #94a3b8
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-intro {
+  color: #94a3b8;
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+/* =========================
+   Contact Cards
+========================= */
+
+.contact-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 850px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 24px 28px;
+
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.contact-card:hover {
+  transform: translateX(8px);
+
+  border-color: #38bdf8;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(56, 189, 248, 0.12);
+}
+
+/* =========================
+   Icon
+========================= */
+
+.contact-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  color: #38bdf8;
+
+  background: rgba(56, 189, 248, 0.08);
+
+  border: 1px solid rgba(56, 189, 248, 0.18);
+
+  font-size: 25px;
+}
+
+/* =========================
+   Text
+========================= */
+
+.contact-card-content {
+  flex: 1;
+}
+
+.contact-card-content span {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  margin-bottom: 6px;
+}
+
+.contact-card-content h3 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* =========================
+   Arrow
+========================= */
+
+.contact-arrow {
+  color: #64748b;
+
+  font-size: 16px;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-card:hover .contact-arrow {
+  color: #38bdf8;
+  transform: translateX(5px);
+}
+
+/* =========================
+   Bottom Message
+========================= */
+
+.contact-message {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-top: 55px;
+}
+
+.contact-message p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 90px 30px;
+  }
+
+  .contact-header h2 {
+    font-size: 44px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 576px) {
+  .contact-section {
+    padding: 80px 20px;
+  }
+
+  .contact-header {
+    margin-bottom: 45px;
+  }
+
+  .contact-subtitle {
+    font-size: 15px;
+  }
+
+  .contact-header h2 {
+    font-size: 36px;
+  }
+
+  .contact-intro {
+    font-size: 15px;
+  }
+
+  .contact-card {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .contact-card-content h3 {
+    font-size: 15px;
+  }
+
+  .contact-card-content span {
+    font-size: 11px;
+  }
+
+  .contact-arrow {
+    font-size: 14px;
+  }
+}
