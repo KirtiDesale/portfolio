@@ -5,8 +5,8 @@ import Projects from "./components/projects/Projects";
 import Education from "./components/education/Education";
 import Achievements from "./components/achievements/Achievements";
 import Contact from "./components/contact/Contact";
-
 import TechStack from "./components/techstack/Techstack";
+
 function App() {
   return (
     <>
