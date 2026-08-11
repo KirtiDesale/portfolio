@@ -1,6 +1,6 @@
-import "./TechStack.css";
+import "./Techstack.css";
 import { motion } from "framer-motion";
-import techStack from "../../data/techStack";
+import techStack from "../../data/techstack";
 
 function TechStack() {
   return (
