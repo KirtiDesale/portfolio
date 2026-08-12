@@ -21,7 +21,7 @@ const projects = [
       "Framer Motion",
     ],
 
-    github: "https://github.com/KirtiDesale",
+    github: "https://github.com/KirtiDesale/portfolio",
 
     live: "",
 
